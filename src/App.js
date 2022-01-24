@@ -10,10 +10,17 @@ import data from "./data/data.json";
 import StarProduct from "./components/StarProduct";
 import HotAccessoriesMenu from "./components/HotAccessoriesMenu";
 import HotAccessories from "./components/HotAccessories";
+import ProductReviews from "./components/ProductReviews";
 
 function App() {
-  const { banner, offer, starProduct, hotAccessories, hotAccessoriesCover } =
-    data;
+  const {
+    banner,
+    offer,
+    starProduct,
+    hotAccessories,
+    hotAccessoriesCover,
+    productReviews,
+  } = data;
   return (
     <Router>
       <PreNavbar />
@@ -71,6 +78,8 @@ function App() {
           }
         />
       </Routes>
+      <Heading text="PRODUCT REVIEWS" />
+      <ProductReviews productReviews={productReviews} />
     </Router>
   );
 }
