@@ -11,6 +11,8 @@ import HotAccessoriesMenu from "./components/HotAccessoriesMenu";
 import HotAccessories from "./components/HotAccessories";
 import ProductReviews from "./components/ProductReviews";
 import Videos from "./components/Video";
+import Banner from "./components/Banner.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   const {
@@ -21,6 +23,7 @@ function App() {
     hotAccessoriesCover,
     productReviews,
     videos,
+    footer,
   } = data;
   return (
     <Router>
@@ -83,6 +86,9 @@ function App() {
       <ProductReviews productReviews={productReviews} />
       <Heading text="VIDEOS" />
       <Videos videos={videos} />
+      <Heading text="IN THE PRESS" />
+      <Banner banner={banner.end} />
+      <Footer footer={footer} />
     </Router>
   );
 }
